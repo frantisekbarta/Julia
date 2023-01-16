@@ -1,0 +1,47 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Julia";
+}
+
+<body>
+    <h1>Razor Pages verze</h1>
+    <div class="row">
+        <div class="column">
+            <form method="post">
+                <div class="row mb-4">
+                    <label for="c1" class="col-sm-1 col-form-label">c1</label>
+                    <div class="col">
+                        <input type="text" class="form-control" id="c1" name="C1" value=@Model.C1>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <label for="c2" class="col-sm-1 col-form-label">c2</label>
+                    <div class="col">
+                        <input type="text" class="form-control" id="c2" name="C2" value=@Model.C2>
+                    </div>
+                </div>
+                <fieldset class="row mb-3">
+                    <div class="col">
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="radio" name="VyberPoctuBarev" id="JednaBarva" value="JednaBarva" checked=@Model.JednaBarvaCheck>
+                            <label class="form-check-label" for="JednaBarva">jedna barva</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="VyberPoctuBarev" id="DveBarvy" value="DveBarvy" checked=@Model.DveBarvyCheck>
+                            <label class="form-check-label" for="DveBarvy">dvě barvy</label>
+                        </div>
+                    </div>
+                </fieldset>
+                <button type="submit" class="btn btn-primary" asp-page-handler="Vygenerovat">Vygenerovat</button>
+                <button type="submit" class="btn btn-primary" asp-page-handler="Nahodne">Náhodně</button>
+                <button type="submit" class="btn btn-primary" asp-page-handler="Vyhledat">Vyhledat</button>
+            </form>
+            <p class="mt-4">@Model.Info</p>
+        </div>
+        <div class="column">
+            <img class="image" src="@Model.Obrazek">
+        </div>
+    </div>
+
+</body>

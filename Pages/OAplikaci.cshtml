@@ -1,0 +1,18 @@
+﻿@page
+@model Julia.Pages.OAplikaciModel
+@{
+    ViewData["Title"] = "O aplikaci";
+}
+
+<br />
+<p>
+    Aplikace ukazuje rozdíl v implementaci Julia fraktálového generátoru pomocí Razor Pages (na backendu) a JavaScriptu (na frontendu).
+    Tlačítko <strong>Vyhledat</strong> vytvoří obrázek o velikosti 700 x 700 pixelů na základě vložených parametrů c1 a c2.
+    Tlačítko <strong>Náhodně</strong> vytvoří obrázek na základě náhodných parametrů. Protože velká část náhodně vybraných parametrů nedává pěkné výsledky,
+    je možné najít estetickou kombinaci parametrů pomocí tlačítka <strong>Vyhledat</strong>. Funkce postupně generuje menší jednobarevné 100 x 100 obrázky na základě náhodných parametrů do té doby,
+    než má vytvořený obrázek minimálně 75 odstínů. Poté na základě získaných parametrů vygeneruje velký obrázek a zobrazí jej. Náhodně generované parametry jsou pro přehlednost zaokrouhleny na
+    tři desetinná místa, přidáním dalších desetinných míst je možné podobu obrázku doladit.
+</p>
+<p>
+    Proměnná <strong>počet odstínů</strong> ukazuje počet barevných odstínů, proměnná <strong>čas</strong> ukazuje rychlost vygenerování obrázku.
+</p>

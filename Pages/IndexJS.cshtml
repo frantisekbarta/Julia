@@ -1,0 +1,46 @@
+﻿@page
+@model Julia.Pages.IndexJSModel
+@{
+    ViewData["Title"] = "Julia";
+}
+
+<body>
+    <h1>JavaScript verze</h1>
+    <div class="row">
+        <div class="column">
+                <div class="row mb-4">
+                    <label for="c1" class="col-sm-1 col-form-label">c1</label>
+                    <div class="col">
+                        <input type="text" class="form-control" id="c1" value="-0,4">
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <label for="c2" class="col-sm-1 col-form-label">c2</label>
+                    <div class="col">
+                        <input type="text" class="form-control" id="c2" value="0,59">
+                    </div>
+                </div>
+                <fieldset class="row mb-3">
+                    <div class="col">
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="radio" name="VyberPoctuBarev" id="JednaBarva" value="JednaBarva" checked />
+                            <label class="form-check-label" for="JednaBarva">jedna barva</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="VyberPoctuBarev" id="DveBarvy" value="DveBarvy" />
+                            <label class="form-check-label" for="DveBarvy">dvě barvy</label>
+                        </div>
+                    </div>
+                </fieldset>
+                <button class="btn btn-primary" onclick="Vygenerovat(document.getElementById('c1').value, document.getElementById('c2').value)">Vygenerovat</button>
+                <button class="btn btn-primary" onclick="Nahodne()">Náhodně</button>
+                <button class="btn btn-primary" onclick="Vyhledat()">Vyhledat</button>
+            <p class="mt-4" id="Info"></p>
+        </div>
+        <div class="column">
+            <canvas class="image" id="canvas" width="700" height="700"></canvas>
+        </div>
+    </div>
+</body>
+
+<script src="~/js/Julia.js"></script>

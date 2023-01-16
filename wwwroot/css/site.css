@@ -1,0 +1,47 @@
+html {
+    min-height: 100%;
+    overflow-y: scroll;
+    position: relative;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+h1 {
+    font-size: 30px;
+    margin: 10px 0px 40px 0px;
+}
+
+.btn {
+    margin: 10px 15px 10px 0px;
+    width: 120px;
+}
+
+.column {
+    flex: 3;
+}
+
+    .column:first-of-type {
+        flex: 2;
+    }
+
+.image {
+    height: auto;
+    max-width: 700px;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+}
+
+@media screen and (max-width: 1000px) {
+    .column {
+        flex: 100%;
+    }
+
+    .image {
+        margin-top: 20px;
+    }
+}
